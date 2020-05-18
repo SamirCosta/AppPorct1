@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AppPorct</string>
+    <string name="valorbruto">Digite o valor bruto:</string>
+    <string name="valorpercentual">Digite a porcentagem:</string>
+    <string name="resulta">Resultado:</string>
+    <string name="botao">Ver resultado</string>
+
+
+</resources>
