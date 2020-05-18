@@ -7,9 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    public EditText valBrutoDig, valPorctDig;
+    private EditText valBrutoDig, valPorctDig;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void abrirTela(View v){
-
-        if(valBrutoDig != null && valPorctDig != null) {
+        if(valBrutoDig.getText().length() != 0 && valPorctDig.getText().length() != 0) {
 
             double valBruto = Double.parseDouble(valBrutoDig.getText().toString());
             double valPorct = Double.parseDouble(valPorctDig.getText().toString());
@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("resultado", resuString);
             startActivity(intent);
 
+        }else{
+            Toast.makeText(MainActivity.this, "Digite algum valor", Toast.LENGTH_LONG).show();
         }
     }
 
